@@ -1,0 +1,12 @@
+* {
+    font-family: "Kumbh Sans", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1158px;
+    width: 100%;
+    margin: 0 auto;
+
+}
