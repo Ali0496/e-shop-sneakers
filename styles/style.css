@@ -1,5 +1,10 @@
 :root {
   --primary-color: #1d2026;
+   --container-width: 1158px; /* Fixed width of the container */
+    --half-width: 445px; /* Half of the container */
+    --slide-width: 445px; /* Slide width in px */
+    --gap-width: 445px;  /* Gap between slides, same as slide width */
+    --button-size: 88px;  /* Button size in px */
 }
 
 * {
@@ -128,6 +133,7 @@ header li {
 
 /* CARD */
 
+
 .card-wrapper {
   padding: 24px 24px 32px;
   max-width: 360px;
@@ -211,89 +217,154 @@ header li {
 }
 
 /*HERO SECTION*/
-
-.hero {
-  margin: 90px 0 132px;
+.containerB{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 125px;
 }
-.hero-imgs {
-  position: relative;
-  overflow: hidden;
-  width: 120%;
-  max-width: 445px;
+.half {
+    width: var(--half-width); /* Each half takes 50% of the container width */
+    display: flex;            /* Align items within each half */
+    align-items: center;      /* Center items vertically */
+    justify-content: center;  /* Center items horizontally */
+    padding: 16px;            /* Add space inside the halves */
+    box-sizing: border-box;  /* Include padding in width calculations */
 }
 
+/* Specific styling for the content half */
+.content-container {
+    background-color: #f4f4f4;  /* Slightly darker background for differentiation */
+}
+
+/* Carousel container styling */
+.carousel {
+    width: var(--half-width); /* Carousel width matches half of the main container */
+    position: relative;       /* For absolute positioning of child elements */
+    overflow: hidden;         /* Hide parts of slides outside the carousel view */
+    border-radius: 10px;      /* Rounded corners for the carousel */
+}
+
+/* The slides wrapper */
 .slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    display: flex; /* Arrange slides horizontally */
+    width: calc((var(--slide-width) + var(--gap-width)) * 5); /* Total width for 5 slides plus gaps */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
 }
 
-.slide img{
-  transition: transform 0.5s ease-in-out;
-  width: 445px;
-  
+/* Hides radio buttons visually but keeps them functional */
+.slides input {
+    display: none;
 }
 
-input#slider-one:checked ~ .slides {
-  transform: translateX(0%);
+/* Individual slide styling */
+.slide {
+    width: var(--slide-width); /* Set slide width from variable */
+    flex-shrink: 0;            /* Prevent slides from shrinking */
+    margin-right: var(--gap-width); /* Add gap between slides */
 }
 
-input#slider-two:checked ~ .slides {
-  transform: translateX(-100%);
+/* Remove gap for the last slide */
+.slide:last-child {
+    margin-right: 0;
 }
 
-input#slider-three:checked ~ .slides {
-  transform: translateX(-200%);
+/* Ensure images fit correctly */
+.slide img {
+    width: 100%; /* Image stretches to fill the slide width */
+    height: auto; /* Maintain image aspect ratio */
+    display: block; /* Remove inline spacing */
 }
 
-input#slider-four:checked ~ .slides {
-  transform: translateX(-300%);
-}
-
+/* Navigation section below the carousel */
 .navigation {
-  display: flex;
-  justify-content: center;
-  gap: 31px;
-  margin-top: 32px;
+    display: flex;           /* Align buttons horizontally */
+    justify-content: center;
+    justify-content: space-between; /* Center buttons under the carousel */
+    margin-top: 16px;        /* Add space above navigation */
+    gap: 10px;               /* Space between buttons */
 }
 
+/* Navigation button styling */
 .navigation label {
-  width: 88px;
-  height: 88px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: border-radius 0.3s;
-  border-color: #ff7e1b;
-  cursor: pointer;
+    width: var(--button-size); /* Set button width from variable */
+    height: var(--button-size); /* Set button height from variable */
+    cursor: pointer;          /* Pointer cursor on hover */
+    border: 2px solid #ddd;   /* Thin border around buttons */
+    border-radius: 5px;       /* Slightly rounded corners */
+    overflow: hidden;         /* Prevent overflow of child images */
+    display: flex;            /* Center images within buttons */
+    align-items: center;      /* Vertical centering */
+    justify-content: center;  /* Horizontal centering */
+    transition: transform 0.3s, border 0.3s; /* Smooth hover effect */
 }
 
+/* Button image styling */
 .navigation label img {
-  width: 100%;
-  height: auto;
+    width: 100%; /* Fill button area */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the button area */
 }
 
+/* Hover effects for buttons */
 .navigation label:hover {
-  opacity: 0.5;
+    transform: scale(1.1);   /* Slight zoom on hover */
+    border-color: #333;      /* Darker border on hover */
 }
 
+/* Radio button logic for slide transitions */
+#slide1:checked ~ .slides {
+    transform: translateX(0); /* Show the first slide */
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(calc(-1 * (var(--slide-width) + var(--gap-width)))); /* Show the second slide */
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(calc(-2 * (var(--slide-width) + var(--gap-width)))); /* Show the third slide */
+}
+
+#slide4:checked ~ .slides {
+    transform: translateX(calc(-3 * (var(--slide-width) + var(--gap-width)))); /* Show the fourth slide */
+}
+
+#slide5:checked ~ .slides {
+    transform: translateX(calc(-4 * (var(--slide-width) + var(--gap-width)))); /* Show the fifth slide */
+}
+
+/* Content section styling */
+.content {
+    text-align: center; /* Center align text */
+}
+
+.content h1 {
+    font-size: 32px; /* Heading size */
+    margin-bottom: 16px; /* Spacing below heading */
+}
+
+.content p {
+    font-size: 19px; /* Paragraph size */
+}
 input[type="radio"] {
   display: none;
 }
 
-input#slider-one:checked ~ .navigation label[for="slider-one"],
-input#slider-two:checked ~ .navigation label[for="slider-two"],
-input#slider-three:checked ~ .navigation label[for="slider-three"],
-input#slider-four:checked ~ .navigation label[for="slider-four"] {
-  opacity: 0.7;
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 90%; /* Scale container to 90% of the viewport width */
+        --half-width: calc(var(--container-width) / 2); /* Recalculate halves */
+        --slide-width: 40%; /* Proportional slide size */
+        --gap-width: 40%; /* Proportional gap size */
+        --button-size: 12vw; /* Scale button size */
+    }
+
+    .content h1 {
+        font-size: 24px; /* Smaller heading size */
+    }
+
+    .content p {
+        font-size: 16px; /* Smaller paragraph size */
+    }
 }
-
-
 @media (min-width: 1230px) {
   .card-wrapper {
     transform: translateX(74px);
