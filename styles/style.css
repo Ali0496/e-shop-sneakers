@@ -239,7 +239,7 @@ header li {
     width: var(--half-width); /* Carousel width matches half of the main container */
     position: relative;       /* For absolute positioning of child elements */
     overflow: hidden;         /* Hide parts of slides outside the carousel view */
-    border-radius: 10px;      /* Rounded corners for the carousel */
+    border-radius: 15px;     /* Rounded corners for the carousel */
 }
 
 /* The slides wrapper */
@@ -287,7 +287,6 @@ header li {
     width: var(--button-size); /* Set button width from variable */
     height: var(--button-size); /* Set button height from variable */
     cursor: pointer;          /* Pointer cursor on hover */
-    border: 2px solid #ddd;   /* Thin border around buttons */
     border-radius: 5px;       /* Slightly rounded corners */
     overflow: hidden;         /* Prevent overflow of child images */
     display: flex;            /* Center images within buttons */
@@ -305,8 +304,10 @@ header li {
 
 /* Hover effects for buttons */
 .navigation label:hover {
-    transform: scale(1.1);   /* Slight zoom on hover */
-    border-color: #333;      /* Darker border on hover */
+opacity: 0.7;
+border: 2px solid rgba(255, 126, 27, 1);
+border-radius: 10px;
+
 }
 
 /* Radio button logic for slide transitions */
