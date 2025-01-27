@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,55 +58,48 @@
     </header>
         <hr />
     <section class="hero">
-      <div class="container containerB">
-          <!-- Left Half: Carousel -->
-        <div class="half carousel-container">
+      <div class="container container-hero">
+        <div class="right-side">
           <div class="carousel">
-            <!-- Hidden radio buttons for navigation logic -->
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
-
-            <!-- Slides wrapper -->
-            <div class="slides">
-              <!-- Individual slides -->
-              <div class="slide"><img src="./Images/sneaker-hero-img1.png" alt="Image 1"></div>
-              <div class="slide"><img src="./Images/sneaker-hero-img2.png" alt="Image 2"></div>
-              <div class="slide"><img src="./Images/sneaker-hero-img3.png" alt="Image 3"></div>
-              <div class="slide"><img src="./Images/sneaker-hero-img4.png" alt="Image 4"></div>
-            </div>
-
-            <!-- Navigation buttons -->
-            <div class="navigation">
-              <label for="slide1"><img src="./Images/sneaker-hero-img1.png" alt="Image 1"></label>
-              <label for="slide2"><img src="./Images/sneaker-hero-img2.png" alt="Image 2"></label>
-              <label for="slide3"><img src="./Images/sneaker-hero-img3.png" alt="Image 3"></label>
-              <label for="slide4"><img src="./Images/sneaker-hero-img4.png" alt="Image 4"></label>
-            </div>
+            <input type="radio" id="slide-one" name="slider" checked>
+            <input type="radio" id="slide-two" name="slider">
+            <input type="radio" id="slide-three" name="slider">
+            <input type="radio" id="slide-four" name="slider">
+          
+          <div class="slides">
+            <div class="slide"><img src="./Images/sneaker-hero-img1.png" alt="white shoes"></div>
+            <div class="slide"><img src="./Images/sneaker-hero-img2.png" alt="white shoes"></div>
+            <div class="slide"><img src="./Images/sneaker-hero-img3.png" alt="white shoes"></div>
+            <div class="slide"><img src="./Images/sneaker-hero-img4.png" alt="white shoes"></div>
+          </div>
+          <div class="navigation">
+            <label for="slide-one"><img src="./Images/sneaker-hero-img1.png" alt="white shoes"></label>
+            <label for="slide-two"><img src="./Images/sneaker-hero-img2.png" alt="white shoes"></label>
+            <label for="slide-three"><img src="./Images/sneaker-hero-img3.png" alt="white shoes"></label>
+            <label for="slide-four"><img src="./Images/sneaker-hero-img4.png" alt="white shoes"></label>
           </div>
         </div>
-        <div class="half hero-text">
-          <h4>Sneaker Company</h4>
-          <h3>Fall Limited Edition Sneakers</h3>
+        </div>
+        <div class="left-side">
+          <h3>Sneaker Company</h3>
+          <h2>Fall Limited Edition Sneakers</h2>
           <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-          <div class="price">
-            <h5>$125.00 sp</h5>
-            <span>50%</span>
+          <div class="price-tag">
+          <input type="checkbox" id="full-screen">
+          <label for="full-screen"> <p>$125.00</p></label> 
+          <div class="task"><img src="./images/sneaker-hero-img1.png" alt=""></div>
+          <img src="" alt="half price discount">
           </div>
-          <div class="hero-btn">
-            <div class="hero-count">
-              <button class="calc-btn">-</button>
-              <span>0</span>
-              <button class="calc-btn ">+</button>
-            </div>
-            <button class="add-card-btn">
-              <img src="./Images/btn-card.png" alt="">
-              <span>Add to cart</span>
-            </button>
+          <div class="delete">
+              <del>$250.00</del>
           </div>
+          <div class="btn-container">
+            <img src="./Images/plus-minus.png" alt="">
+            <button class="shop-now"><img src="./Images/btn-card.png" alt="">Add to cart</button>
+          </div>
+
         </div>
       </div>
-    </section>    
+    </section>
   </body>
 </html>
