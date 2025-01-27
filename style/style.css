@@ -13,6 +13,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  position: relative;
+}
 .container {
   max-width: 1158px;
   width: 100%;
@@ -270,6 +273,9 @@ input[type="radio"] {
 #slide-four:checked ~ .slides {
   transform: translateX(-300%);
 }
+#full-screen:checked ~ .task {
+  transform: translateX(99999px);
+}
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -335,6 +341,20 @@ border-radius: 10px;
   color: #69707d;
   margin-bottom: 24px;
 }
+
+.task{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: o;
+  left: 0;
+  z-index: 12;
+  background-color: #2c2626;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
 .price-tag p {
   font-size: 28px;
   font-weight: 700;
