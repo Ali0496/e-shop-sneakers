@@ -1,48 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <title>Sneakers</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-wrapper">
-                <nav>
-                    <img class="burger" src="../Images/burger.svg" alt="">
-                    <img class="logo" src="../Images/logo.svg" alt="">
-                    <ul>
-                        <li><a href="../index.html">Collections</a></li>
-                        <li><span></span><a href="./men.html">Men</a></li>
-                        <li><a href="./woman.html">Women</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-right">
-                    <button class="savat">
-                       <img src="../Images/Shopping-card.svg" alt="card image">
-                       <span>3</span>
-                    </button> 
-                    <button class="account">
-                       <img class="account-pct" src="../Images/Account.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <hr>
-        </div>
-    </header>
-    <br><br><br><br>
-    <h1 style="text-align: center;">MAN PAGE</h1>
-</body>
-</htm
-=======
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,6 +11,83 @@
       rel="stylesheet"
     />
     <title>Sneakers</title>
+    <style>
+      .loader {
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+
+      .loader div {
+        width: 20px;
+        height: 60px;
+        background: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        border-radius: 2px;
+        animation: fade 1.2s linear infinite;
+      }
+
+      .loader div:nth-child(1) {
+        transform: rotate(0deg) translateY(-80px);
+        animation-delay: 0s;
+      }
+      .loader div:nth-child(2) {
+        transform: rotate(30deg) translateY(-80px);
+        animation-delay: -1.1s;
+      }
+      .loader div:nth-child(3) {
+        transform: rotate(60deg) translateY(-80px);
+        animation-delay: -1s;
+      }
+      .loader div:nth-child(4) {
+        transform: rotate(90deg) translateY(-80px);
+        animation-delay: -0.9s;
+      }
+      .loader div:nth-child(5) {
+        transform: rotate(120deg) translateY(-80px);
+        animation-delay: -0.8s;
+      }
+      .loader div:nth-child(6) {
+        transform: rotate(150deg) translateY(-80px);
+        animation-delay: -0.7s;
+      }
+      .loader div:nth-child(7) {
+        transform: rotate(180deg) translateY(-80px);
+        animation-delay: -0.6s;
+      }
+      .loader div:nth-child(8) {
+        transform: rotate(210deg) translateY(-80px);
+        animation-delay: -0.5s;
+      }
+      .loader div:nth-child(9) {
+        transform: rotate(240deg) translateY(-80px);
+        animation-delay: -0.4s;
+      }
+      .loader div:nth-child(10) {
+        transform: rotate(270deg) translateY(-80px);
+        animation-delay: -0.3s;
+      }
+      .loader div:nth-child(11) {
+        transform: rotate(300deg) translateY(-80px);
+        animation-delay: -0.2s;
+      }
+      .loader div:nth-child(12) {
+        transform: rotate(330deg) translateY(-80px);
+        animation-delay: -0.1s;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -85,6 +119,20 @@
     </header>
     <br /><br /><br /><br />
     <h1 style="text-align: center">MAN PAGE</h1>
+    <br /><br /><br /><br />
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </body>
 </html>
->>>>>>> ae91ca75a49092a386526082ed388ae73dcccb32
