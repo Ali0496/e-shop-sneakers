@@ -100,6 +100,44 @@
 
         </div>
       </div>
-    </section>
+   </section>
+
+
+
+
+
+    <!-- Belov code for learning consolelog only -->
+
+    
+    <script>
+      // let userInfo = {
+//     firstName:"Ali",
+//     age:22,
+//     address:[22, "Mustaqillik", "guliston"]
+// }
+// console.log(userInfo.address[1]);
+
+// let students = [1, 2, 3, {ism:"ahmad", kasbi:"Oqtuvchi"}]
+// console.log(students[3].kasbi);
+let base = {
+    raqamlar:[1,2,3,4,5],
+    ism:"Ahmad",
+    xodisa:{
+        vaqti:"kecha",
+        vodea:[1,0, ["ok", [0,{fel:"kelmagan"}]]]
+    },
+    ok:{
+        ok:{
+            qayerga:[11,22,33,44,"darsga"]
+        }
+    },
+    kim:["aka"]
+}
+
+//natija:"1Ahmad 2aka 3kecha 4darsga 5kelmagan"
+
+console.log(base.raqamlar[0] + (base.ism), (base.raqamlar[1]) + (base.kim), (base.raqamlar[2]) + (base.xodisa.vaqti), (base.raqamlar[3]) + (base.ok.ok.qayerga[4]), (base.raqamlar[4]) + (base.xodisa.vodea[2][1][1].fel));
+
+    </script>
   </body>
 </html>

@@ -390,8 +390,8 @@ input[type="checkbox"] {
 }
 .btn-container button img {
   margin-right: 15.54px;
-  
 }
+
 @media (min-width: 1230px) {
   .card-wrapper {
     transform: translateX(74px);
