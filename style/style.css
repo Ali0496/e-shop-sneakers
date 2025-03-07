@@ -391,6 +391,36 @@ input[type="checkbox"] {
 .btn-container button img {
   margin-right: 15.54px;
 }
+.burger-face {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: grid;
+  grid-template-columns: 67%;
+  z-index: 10;
+  transform: translateX(-3000px);
+  transform: 2s;
+}
+
+.burger-face button {
+  margin-bottom: 54px;
+
+
+}
+.burger-right {
+  background-color: white;
+}
+
+#burger-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.show_modal {
+  transform: translateX(0);
+  transition: 400ms;
+}
+
 
 @media (min-width: 1230px) {
   .card-wrapper {
