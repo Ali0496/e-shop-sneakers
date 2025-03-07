@@ -399,7 +399,7 @@ input[type="checkbox"] {
   grid-template-columns: 67%;
   z-index: 10;
   transform: translateX(-3000px);
-  transform: 2s;
+  transition: 2s;
 }
 
 .burger-face button {
@@ -417,7 +417,7 @@ input[type="checkbox"] {
 }
 
 .show_modal {
-  transform: translateX(0);
+  transform: translateX(0px);
   transition: 400ms;
 }
 
